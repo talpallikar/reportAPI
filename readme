@@ -1,0 +1,10 @@
+readme
+
+This is web application routed through flask. It is an api that fetches pdf links from OTA report database hosted by princeton.
+
+requirements txt is included, install using pip install -r requirements.txt 
+
+run using python app.py, should be hosted locally on port 5000. output is located at localhost:5000/reports/ in the form {reportyear_reportcode_reportTitle: reportlink}
+
+Note: For this and the other related script, i've omitted lxml as the html parser for your ease of testing because it is painful to install in virtual environments(because it involves C components, so pip cannot do the whole thing). Beautifulsoup will default to your default html parser, in some (very rare) cases this will cause problems. If you have such problems, or are annoyed by the warning in cmd, install lxml and change line 24 of app.py to soup = BeautifulSoup(html,lxml)
+
